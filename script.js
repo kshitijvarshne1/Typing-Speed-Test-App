@@ -4,5 +4,8 @@ const setOfWords=[
     "Technology brings about economic wealth through improved production, facilitation of trade, and promoting the division of labor.",
     "This work entitles Beckmann to be regarded as the founder of scientific technology, a term which he was the first to use in 1772.",
     "We only have people doing this work because we have not yet developed the technology to get machines to do it."
-
 ];
+
+const msg = document.getElementById('msg');
+const  typeWords= document.getElementById('mywords');
+const btn = document.getElementById('btn')
