@@ -9,3 +9,17 @@ const setOfWords=[
 const msg = document.getElementById('msg');
 const  typeWords= document.getElementById('mywords');
 const btn = document.getElementById('btn')
+
+let startTime, endTime;
+
+playGame=()=>{
+
+}
+
+btn.addEventListener('click', function (){
+    if(this.innerText=='Start'){
+        typeWords.disabled= false;
+        playGame();
+    }
+
+})
