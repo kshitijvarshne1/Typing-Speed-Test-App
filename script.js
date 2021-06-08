@@ -24,6 +24,20 @@ const wordCounter=(str)=>{
     let response = str.split(" ").length;
     return response;
 }
+
+const compareWords=(str1, str2)=>{
+    let w1 = str1.split(" ");
+    let w2 = str2.split(" ");
+    let cnt=0;
+    for(let i=0;i< w1.length;i++){
+        if(w1[i]==w2[i]){
+            cnt++;
+        }
+    }
+    let err= w1.length-cnt;
+    return cnt+" correct out of "+w1.length+" words and the total number of errors are "+err+" .";
+
+}
 const endPlay=()=>{
     let data = new Date();
     endTime= data.getTime();
@@ -32,7 +46,8 @@ const endPlay=()=>{
     let wordCount= wordCounter(totalStr);
     console.log(wordCount);
     let speed= Math.round((wordCount/totalTime)*60);
-    let finalMsg= " You typed total at "+speed+" words pe minute";
+    let finalMsg= " You typed total at "+speed+" words pe minute ";
+    finalMsg+=compareWords(msg.innerText,totalStr);
     msg.innerText=finalMsg;
 }
 
