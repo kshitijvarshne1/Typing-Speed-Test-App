@@ -13,7 +13,8 @@ const btn = document.getElementById('btn')
 let startTime, endTime;
 
 playGame=()=>{
-
+    let randomNumber= Math.floor(Math.random()*setOfWords.length)
+    msg.innerText= setOfWords[randomNumber];
 }
 
 btn.addEventListener('click', function (){
